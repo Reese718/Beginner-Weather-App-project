@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/7f0a32dd8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+
+    <title>Reese S Wireframe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="city-search">
+        <form id="search-form">
+          <button id="currentLocation">
+            <i class="fas fa-map-marker-alt"></i>
+          </button>
+          <input
+            type="text"
+            placeholder="Enter City"
+            class="enter-city"
+            id="search-city"
+            autofocus="on"
+            autocomplete="off"
+          />
+
+          <button id="citySearchButton"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <h1 id="city-name">New York</h1>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="card day-info" style="width: 18rem">
+              <div class="card-body">
+                <h5 id="todayDisplay" class="card-title today-box">Today</h5>
+                <p id="dateTime" class="card-text date-time">
+                  April 29, 2021, 12:00PM<br />
+                </p>
+
+                <ul>
+                  <li>Precipitation: 100%</li>
+                  <li>Winds: <span id="wind"></span></li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card day-image" style="width: 25rem">
+              <img
+                src="https://www.wisc-online.com/assetrepository/getfile?id=2838&getType=view&width=0&height=0"
+                class="card-img-top"
+                alt="rain-cloud"
+              />
+              <div class="card-body"></div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card day-temp" style="width: 18rem">
+              <div class="card-body">
+                <h5 id="temp-today" class="card-title today-temp"></h5>
+                <p class="card-text sub-temp">
+                  <a href="#" class="tempLink" id="celsius-link">°C</a> |
+                  <a href="#" class="tempLink" id="farenheit-link">°F</a><br />
+                  <span id="feelsLike" class="temp">Feels like 76°F</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="weatherDescription"></h2>
+      <hr />
+      <div class="container hourly-forecast">
+        <div class="row">
+          <div class="col">1PM<br />🌧<br />80°</div>
+          <div class="col">2PM<br />🌧<br />80°</div>
+          <div class="col">3PM<br />🌧<br />81°</div>
+          <div class="col">4PM<br />🌧<br />81°</div>
+          <div class="col">5PM<br />🌧<br />83°</div>
+          <div class="col">6PM<br />🌧<br />83°</div>
+          <div class="col">7PM<br />🌧<br />79°</div>
+          <div class="col">8PM<br />🌧<br />79°</div>
+          <div class="col">9PM<br />🌧<br />79°</div>
+          <div class="col">10PM<br />🌧<br />76°</div>
+          <div class="col">11PM<br />🌧<br />72°</div>
+          <div class="col">12AM<br />🌧<br />72°</div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="container five-day-forecast">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <i class="fas fa-cloud-sun"></i>
+                <h5 class="card-title">FRI</h5>
+                <p class="card-text">82°H<br />68°L</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <i class="fas fa-cloud-sun"></i>
+                <h5 class="card-title">SAT</h5>
+                <p class="card-text">82°H<br />68°L</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <i class="fas fa-cloud-sun"></i>
+                <h5 class="card-title">SUN</h5>
+                <p class="card-text">82°H<br />68°L</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <i class="fas fa-cloud-sun"></i>
+                <h5 class="card-title">MON</h5>
+                <p class="card-text">82°H<br />68°L</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 12rem">
+              <div class="card-body">
+                <i class="fas fa-cloud-sun"></i>
+                <h5 class="card-title">TUE</h5>
+                <p class="card-text">82°H<br />68°L</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
