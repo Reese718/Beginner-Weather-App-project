@@ -1,0 +1,131 @@
+body {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  padding-bottom: 10px;
+  width: 100%;
+  left: 0;
+}
+
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Prompt", sans-serif;
+  font-size: 40px;
+  color: #000000;
+  padding-top: 10px;
+}
+h5 {
+  font-size: 30px;
+}
+ul {
+  font-size: 16px;
+  font-weight: 400;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.city-search {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px;
+}
+.day-info {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  border: none;
+}
+.today-box {
+  font-size: 60px;
+}
+.date-time {
+  font-size: 20px;
+  font-weight: 200;
+  color: #ffffff;
+  line-height: 0.5;
+}
+.day-image {
+  border: none;
+}
+.tempLink {
+  color: #ffffff;
+  text-align: center;
+}
+img {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+}
+
+.day-temp {
+  padding-left: 10px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
+  border: none;
+  margin: 0;
+}
+
+.today-temp {
+  font-size: 60px;
+}
+span.temp {
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 20px;
+}
+.hourly-forecast {
+  text-align: center;
+  font-weight: 400;
+}
+.card-body {
+  font-size: 26px;
+  text-align: center;
+}
