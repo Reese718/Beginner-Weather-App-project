@@ -41,7 +41,9 @@ ul {
   margin: 0 auto;
   padding: 0px;
 }
-
+#weatherBody {
+  max-width: 660px;
+}
 .city-search {
   position: fixed;
   top: 0;
@@ -96,7 +98,6 @@ img {
 }
 
 .day-temp {
-  padding-left: 10px;
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.15) 0%,
