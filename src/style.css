@@ -127,6 +127,9 @@ span.temp {
   font-weight: 400;
 }
 .card-body {
-  font-size: 26px;
+  font-size: 20px;
   text-align: center;
+}
+.card {
+  width: 6rem;
 }
