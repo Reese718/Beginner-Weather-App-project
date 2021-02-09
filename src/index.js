@@ -60,6 +60,11 @@ function showTemp(response) {
   let feelsLike = Math.round(response.data.main.feels_like);
   let feelsLikeElement = document.querySelector("#feelsLike");
   feelsLikeElement.innerHTML = `Feels Like ${feelsLike}°F`;
+  let iconElement = document.querySelector("#weatherIcon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function search(city) {

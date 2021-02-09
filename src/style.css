@@ -67,10 +67,10 @@ ul {
   border: none;
 }
 .today-box {
-  font-size: 60px;
+  font-size: 43px;
 }
 .date-time {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 200;
   color: #ffffff;
   line-height: 0.5;
@@ -132,4 +132,6 @@ span.temp {
 }
 .card {
   width: 6rem;
+}
+#weatherIcon {
 }
