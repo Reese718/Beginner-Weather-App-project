@@ -11,6 +11,19 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:{minutes}`;
+}
+
 let year = now.getFullYear();
 let days = [
   "Sunday",
@@ -43,6 +56,19 @@ let month = months[now.getMonth()];
 dateTime.innerHTML = `${month} ${date} ${year}, ${hours}:${minutes}`;
 todayDisplay.innerHTML = `${day}`;
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function showTemp(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
@@ -66,7 +92,132 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+function displayForecast(response) {
+  let fiveDayElement = document.querySelector("#fiveDay");
+  let forecast = response.data.list[0];
+  fiveDayElement.innerHTML = `<div  id="fiveDay" class="container five-day-forecast">
+        <div class="row">
+         
+         
+          <div class="col-2">
+            <div class="card">
+              
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          
+          
+  `;
+  forecast = response.data.list[1];
+  fiveDayElement.innerHTML += `
+          <div class="col-2">
+            <div class="card">
+              
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          
+  `;
+  forecast = response.data.list[2];
+  fiveDayElement.innerHTML += `
+          <div class="col-2">
+            <div class="card">
+              
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          
+          
+  `;
+  forecast = response.data.list[3];
+  fiveDayElement.innerHTML += `
+          <div class="col-2">
+            <div class="card">
+             
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          
+          
+  `;
+  forecast = response.data.list[4];
+  fiveDayElement.innerHTML += `
+          <div class="col-2">
+            <div class="card">
+              
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          
+          
+  `;
+  forecast = response.data.list[5];
+  fiveDayElement.innerHTML += `
+          <div class="col-2">
+            <div class="card">
+              
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          
+          
+  `;
+  forecast = response.data.list[6];
+  fiveDayElement.innerHTML += `
+          <div class="col-2">
+            <div class="card">
+              
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecast.weather[0].icon
+                }@2x.png"/>
+                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <p class="card-text">${Math.round(
+                  forecast.main.temp_max
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+              </div>
+            </div>
+          </div>
+          </div>
+  `;
 
+  console.log(response.data.list[0]);
+}
 function search(city) {
   let apiKey = "19bab870f5f47c4355d6b6a4362e572f";
   let units = "imperial";
@@ -74,6 +225,9 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showTemp);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function cityInputSearch(event) {

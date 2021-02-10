@@ -82,20 +82,6 @@ ul {
   color: #ffffff;
   text-align: center;
 }
-img {
-  background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.15) 0%,
-      rgba(0, 0, 0, 0.15) 100%
-    ),
-    radial-gradient(
-        at top center,
-        rgba(255, 255, 255, 0.4) 0%,
-        rgba(0, 0, 0, 0.4) 120%
-      )
-      #989898;
-  background-blend-mode: multiply, multiply;
-}
 
 .day-temp {
   background: linear-gradient(
@@ -126,12 +112,7 @@ span.temp {
   text-align: center;
   font-weight: 400;
 }
-.card-body {
-  font-size: 20px;
-  text-align: center;
-}
+
 .card {
   width: 6rem;
-}
-#weatherIcon {
 }
