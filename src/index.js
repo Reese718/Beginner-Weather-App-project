@@ -95,13 +95,9 @@ function showTemp(response) {
 function displayForecast(response) {
   let fiveDayElement = document.querySelector("#fiveDay");
   let forecast = response.data.list[0];
-  fiveDayElement.innerHTML = `<div  id="fiveDay" class="container five-day-forecast">
-        <div class="row">
-         
-         
+  fiveDayElement.innerHTML = `
           <div class="col-2">
-            <div class="card">
-              
+            <div class="card hourlyCard">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -111,14 +107,11 @@ function displayForecast(response) {
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
             </div>
-          
-          
   `;
   forecast = response.data.list[1];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card">
-              
+            <div class="card hourlyCard">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -127,14 +120,12 @@ function displayForecast(response) {
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
-            </div>
-          
+            </div>  
   `;
   forecast = response.data.list[2];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card">
-              
+            <div class="card hourlyCard">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -143,15 +134,12 @@ function displayForecast(response) {
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
-            </div>
-          
-          
+            </div>          
   `;
   forecast = response.data.list[3];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card">
-             
+            <div class="card hourlyCard">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -161,14 +149,11 @@ function displayForecast(response) {
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
             </div>
-          
-          
   `;
   forecast = response.data.list[4];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card">
-              
+            <div class="card hourlyCard">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -178,14 +163,11 @@ function displayForecast(response) {
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
             </div>
-          
-          
   `;
   forecast = response.data.list[5];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card">
-              
+            <div class="card hourlyCard ">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -195,25 +177,6 @@ function displayForecast(response) {
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
             </div>
-          
-          
-  `;
-  forecast = response.data.list[6];
-  fiveDayElement.innerHTML += `
-          <div class="col-2">
-            <div class="card">
-              
-                <img src= "http://openweathermap.org/img/wn/${
-                  forecast.weather[0].icon
-                }@2x.png"/>
-                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
-                  forecast.main.temp_max
-                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
-              </div>
-            </div>
-          </div>
-          </div>
   `;
 
   console.log(response.data.list[0]);

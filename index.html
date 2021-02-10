@@ -25,18 +25,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
-
-    <title>Weather App </title>
+    <title>Weather App</title>
   </head>
   <body>
-    <h1 id="city-name">New York</h1>
     <div id="weatherBody" class="container">
+      <h1 id="city-name">New York</h1>
       <div class="city-search">
         <form id="search-form">
           <button id="currentLocation">
             <i class="fas fa-map-marker-alt"></i>
           </button>
           <input
+            class="col-10"
             type="text"
             placeholder="Enter City"
             class="enter-city"
@@ -44,85 +44,85 @@
             autofocus="on"
             autocomplete="off"
           />
-
           <button id="citySearchButton"><i class="fas fa-search"></i></button>
         </form>
       </div>
-<div>
-      <div class="container">
-        <div class="row">
-          <div class="col-4">
-            <div class="card day-info" style="width: 12rem">
-              <div class="card-body">
-                <h5 id="todayDisplay" class="card-title today-box"></h5>
-                <p id="dateTime" class="card-text date-time">
-                  <br />
-                </p>
-
-                <ul>
-                  <li>Precipitation: 100%</li>
-                  <li>Winds: <span id="wind"></span></li>
-                  <li>Humidity: <span id="humidity"></span>%</li>
-                </ul>
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <div class="card day-info" style="width: 12rem">
+                <div class="card-body">
+                  <h5 id="todayDisplay" class="card-title today-box"></h5>
+                  <p id="dateTime" class="card-text date-time">
+                    <br />
+                  </p>
+                  <ul>
+                    <li>Precipitation: 100%</li>
+                    <li>Winds: <span id="wind"></span></li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-4">
-            <div class="card day-image" style="width: 12rem">
-              <img
-                src=" http://openweathermap.org/img/wn/10d@2x.png"
-                class="card-img-top"
-                id="weatherIcon"
-                alt="rain-cloud"
-              />
-              <div class="card-body"></div>
+            <div class="col-4">
+              <div class="card day-image" style="width: 12rem">
+                <img
+                  src=" http://openweathermap.org/img/wn/10d@2x.png"
+                  class="card-img-top"
+                  id="weatherIcon"
+                  alt="rain-cloud"
+                />
+                <div class="card-body"></div>
+              </div>
             </div>
-          </div>
-          <div class="col-4">
-            <div class="card day-temp" style="width: 12rem">
-              <div class="card-body">
-                <h5 id="temp-today" class="card-title today-temp"></h5>
-                <p class="card-text sub-temp">
-                  <a href="#" class="tempLink" id="celsius-link">°C</a> |
-                  <a href="#" class="tempLink" id="farenheit-link">°F</a><br />
-                  <span id="feelsLike" class="temp"></span>
-                </p>
+            <div class="col-4">
+              <div class="card day-temp" style="width: 12rem">
+                <div class="card-body">
+                  <h5 id="temp-today" class="card-title today-temp"></h5>
+                  <p class="card-text sub-temp">
+                    <a href="#" class="tempLink" id="celsius-link">°C</a> |
+                    <a href="#" class="tempLink" id="farenheit-link">°F</a
+                    ><br />
+                    <span id="feelsLike" class="temp"></span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <h2 id="weatherDescription"></h2>
-      <hr />
-      <div class="container hourly-forecast">
-        <div class="row">
-          <div class="col">1PM<br />🌧<br />80°</div>
-          <div class="col">2PM<br />🌧<br />80°</div>
-          <div class="col">3PM<br />🌧<br />81°</div>
-          <div class="col">4PM<br />🌧<br />81°</div>
-          <div class="col">5PM<br />🌧<br />83°</div>
-          <div class="col">6PM<br />🌧<br />83°</div>
-          <div class="col">7PM<br />🌧<br />79°</div>
-          <div class="col">8PM<br />🌧<br />79°</div>
-          <div class="col">9PM<br />🌧<br />79°</div>
-          <div class="col">10PM<br />🌧<br />76°</div>
-          <div class="col">11PM<br />🌧<br />72°</div>
-          <div class="col">12AM<br />🌧<br />72°</div>
+        <h2 id="weatherDescription"></h2>
+        <hr />
+        <div class="container hourly-forecast">
+          <div class="row">
+            <div class="col">1PM<br />🌧<br />80°</div>
+            <div class="col">2PM<br />🌧<br />80°</div>
+            <div class="col">3PM<br />🌧<br />81°</div>
+            <div class="col">4PM<br />🌧<br />81°</div>
+            <div class="col">5PM<br />🌧<br />83°</div>
+            <div class="col">6PM<br />🌧<br />83°</div>
+            <div class="col">7PM<br />🌧<br />79°</div>
+            <div class="col">8PM<br />🌧<br />79°</div>
+            <div class="col">9PM<br />🌧<br />79°</div>
+            <div class="col">10PM<br />🌧<br />76°</div>
+            <div class="col">11PM<br />🌧<br />72°</div>
+            <div class="col">12AM<br />🌧<br />72°</div>
+          </div>
         </div>
-      </div>
-      <hr />
-
-      <div  id="fiveDay" class="container five-day-forecast">
+        <hr />
+        <div id="fiveDay" class="container five-day-forecast row"></div>
         <div class="row">
-         
           <p id="footer">
-            <a href="https://github.com/Reese718/Beginner-Weather-App-project"
-            >Open-source</a
+            <a
+              class="sourceCode"
+              href="https://github.com/Reese718/Beginner-Weather-App-project"
+              target="_blank"
+              >Open-source</a
             >
-            coded by Reese S.
+            code by Reese S.
           </p>
-        </div>  
+        </div>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
