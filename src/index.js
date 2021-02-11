@@ -92,26 +92,27 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
 function displayForecast(response) {
   let fiveDayElement = document.querySelector("#fiveDay");
   let forecast = response.data.list[0];
   fiveDayElement.innerHTML = `
           <div class="col-2">
-            <div class="card hourlyCard">
+            <div class="card hourlyCard one">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
                 <p class="card-text">${Math.round(
                   forecast.main.temp_max
-                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
+                )}°H | ${Math.round(forecast.main.temp_min)}°L</p>
               </div>
             </div>
   `;
   forecast = response.data.list[1];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card hourlyCard">
+            <div class="card hourlyCard two">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -125,7 +126,7 @@ function displayForecast(response) {
   forecast = response.data.list[2];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card hourlyCard">
+            <div class="card hourlyCard three">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -139,7 +140,7 @@ function displayForecast(response) {
   forecast = response.data.list[3];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card hourlyCard">
+            <div class="card hourlyCard four">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
@@ -153,21 +154,7 @@ function displayForecast(response) {
   forecast = response.data.list[4];
   fiveDayElement.innerHTML += `
           <div class="col-2">
-            <div class="card hourlyCard">
-                <img src= "http://openweathermap.org/img/wn/${
-                  forecast.weather[0].icon
-                }@2x.png"/>
-                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
-                  forecast.main.temp_max
-                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
-              </div>
-            </div>
-  `;
-  forecast = response.data.list[5];
-  fiveDayElement.innerHTML += `
-          <div class="col-2">
-            <div class="card hourlyCard ">
+            <div class="card hourlyCard five">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>

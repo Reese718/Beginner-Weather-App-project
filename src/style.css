@@ -18,7 +18,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
   color: #ffffff;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   width: 100%;
   left: 0;
 }
@@ -32,7 +32,7 @@ h2 {
   padding-top: 10px;
 }
 h5 {
-  font-size: 30px;
+  font-size: 20px;
 }
 ul {
   font-size: 16px;
@@ -42,9 +42,9 @@ ul {
   padding: 0px;
 }
 #weatherBody {
-  max-width: 660px;
+  width: 470px;
   border: 2px dotted #ec6e4c;
-  padding: 20px;
+  padding: 15px 15px 20px 15px;
   border-radius: 10px;
 }
 .city-search {
@@ -118,7 +118,7 @@ ul {
 }
 
 .today-temp {
-  font-size: 60px;
+  font-size: 40px;
 }
 span.temp {
   color: #ffffff;
@@ -132,6 +132,8 @@ span.temp {
 
 .hourlyCard {
   width: 5rem;
+  margin-bottom: 10px;
+
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.15) 0%,
@@ -145,6 +147,22 @@ span.temp {
       #989898;
   background-blend-mode: multiply, multiply;
   border: 1px solid #ec6e4c;
+}
+
+.one {
+  margin: 0rem;
+}
+.two {
+  margin: 0.25rem;
+}
+.three {
+  margin: 0.5rem;
+}
+.four {
+  margin: 1rem;
+}
+.five {
+  margin: 1.5rem;
 }
 .sourceCode {
   color: #ffffff;
