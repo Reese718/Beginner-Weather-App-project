@@ -97,7 +97,7 @@ function displayForecast(response) {
   let fiveDayElement = document.querySelector("#fiveDay");
   let forecast = response.data.list[0];
   fiveDayElement.innerHTML = `
-          <div class="col-2">
+          <div class="col-2  ml-0 m-1">
             <div class="card hourlyCard one">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
@@ -111,7 +111,7 @@ function displayForecast(response) {
   `;
   forecast = response.data.list[1];
   fiveDayElement.innerHTML += `
-          <div class="col-2">
+          <div class="col-2 m-1" >
             <div class="card hourlyCard two">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
@@ -125,7 +125,7 @@ function displayForecast(response) {
   `;
   forecast = response.data.list[2];
   fiveDayElement.innerHTML += `
-          <div class="col-2">
+          <div class="col-2 m-1">
             <div class="card hourlyCard three">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
@@ -139,7 +139,7 @@ function displayForecast(response) {
   `;
   forecast = response.data.list[3];
   fiveDayElement.innerHTML += `
-          <div class="col-2">
+          <div class="col-2 m-1">
             <div class="card hourlyCard four">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
@@ -153,7 +153,7 @@ function displayForecast(response) {
   `;
   forecast = response.data.list[4];
   fiveDayElement.innerHTML += `
-          <div class="col-2">
+          <div class="col-2 m-1">
             <div class="card hourlyCard five">
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon

@@ -44,8 +44,8 @@ ul {
 #weatherBody {
   width: 470px;
   border: 2px dotted #ec6e4c;
-  padding: 15px 15px 20px 15px;
-  border-radius: 10px;
+
+  border-radius: 20px;
 }
 .city-search {
   display: block;
@@ -55,6 +55,7 @@ ul {
   margin: 0;
   padding: 20px;
 }
+
 .day-info {
   background: linear-gradient(
       to bottom,
@@ -69,9 +70,15 @@ ul {
       #989898;
   background-blend-mode: multiply, multiply;
   border: none;
+  border-radius: 10px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 37px;
+  box-sizing: content-box;
 }
 .today-box {
-  font-size: 40px;
+  font-size: 20px;
 }
 .date-time {
   font-size: 15px;
@@ -94,6 +101,9 @@ ul {
       #989898;
   background-blend-mode: multiply, multiply;
   border: none;
+  left: 75px;
+  border-radius: 10px;
+  box-sizing: content-box;
 }
 .tempLink {
   color: #ffffff;
@@ -114,7 +124,9 @@ ul {
       #989898;
   background-blend-mode: multiply, multiply;
   border: none;
-  margin: 0;
+  left: 160px;
+  border-radius: 10px;
+  box-sizing: content-box;
 }
 
 .today-temp {
@@ -131,8 +143,7 @@ span.temp {
 }
 
 .hourlyCard {
-  width: 5rem;
-  margin-bottom: 10px;
+  width: 4rem;
 
   background: linear-gradient(
       to bottom,
@@ -146,23 +157,11 @@ span.temp {
       )
       #989898;
   background-blend-mode: multiply, multiply;
-  border: 1px solid #ec6e4c;
-}
 
-.one {
-  margin: 0rem;
+  border-radius: 15px;
 }
-.two {
-  margin: 0.25rem;
-}
-.three {
-  margin: 0.5rem;
-}
-.four {
-  margin: 1rem;
-}
-.five {
-  margin: 1.5rem;
+.card-text {
+  font-size: 24px;
 }
 .sourceCode {
   color: #ffffff;
