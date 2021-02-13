@@ -34,6 +34,9 @@ h2 {
 h5 {
   font-size: 20px;
 }
+.weatherReport {
+  font-family: "Reggae One", cursive;
+}
 ul {
   font-size: 16px;
   font-weight: 400;
@@ -44,6 +47,7 @@ ul {
 #weatherBody {
   width: 470px;
   border: 2px dotted #ec6e4c;
+  padding: 10px 10px 15px 10px;
 
   border-radius: 20px;
 }
@@ -76,6 +80,7 @@ ul {
   padding-bottom: 0px;
   padding-right: 37px;
   box-sizing: content-box;
+  position: relative;
 }
 .today-box {
   font-size: 20px;
@@ -104,6 +109,7 @@ ul {
   left: 75px;
   border-radius: 10px;
   box-sizing: content-box;
+  position: relative;
 }
 .tempLink {
   color: #ffffff;
@@ -127,6 +133,7 @@ ul {
   left: 160px;
   border-radius: 10px;
   box-sizing: content-box;
+  position: relative;
 }
 
 .today-temp {
