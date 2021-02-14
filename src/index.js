@@ -1,6 +1,7 @@
 let now = new Date();
 let dateTime = document.querySelector("#dateTime");
 let todayDisplay = document.querySelector("#todayDisplay");
+let time = document.querySelector("#time");
 
 let date = now.getDate();
 let hours = now.getHours();
@@ -53,8 +54,9 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-dateTime.innerHTML = `${month} ${date} ${year}, ${hours}:${minutes}`;
+dateTime.innerHTML = `${month} ${date}, ${year} `;
 todayDisplay.innerHTML = `${day}`;
+time.innerHTML = `${hours}:${minutes}`;
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);

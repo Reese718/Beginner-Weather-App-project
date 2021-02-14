@@ -36,14 +36,16 @@ h5 {
 }
 .weatherReport {
   font-family: "Reggae One", cursive;
+  color: #ec6e4c;
 }
 ul {
   font-size: 16px;
+  text-align: left;
   line-height: 1;
   font-weight: 400;
   list-style: none;
   margin: 0 auto;
-  padding: 0px;
+  padding-bottom: 40px;
 }
 #weatherBody {
   width: 470px;
@@ -61,7 +63,9 @@ ul {
   margin: 0;
   padding: 20px;
 }
-
+.mainDisplay {
+  padding: 0px 5px 0px 5px;
+}
 .day-info {
   background: linear-gradient(
       to bottom,
@@ -76,22 +80,36 @@ ul {
       #989898;
   background-blend-mode: multiply, multiply;
   border: none;
-  border-radius: 10px;
+  border-radius: 0px;
   padding-left: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-right: 37px;
+  padding-right: 0px;
   box-sizing: content-box;
   position: relative;
 }
 .today-box {
-  font-size: 20px;
+  font-size: 35px;
+}
+
+#todayDisplay {
+  padding-top: 35px;
+}
+.dateInfo {
+  padding: 0px;
+  text-align: center;
 }
 .date-time {
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 300;
   color: #ffffff;
   line-height: 0.5;
+  padding-bottom: 5px;
+}
+#time {
+  font-size: 32px;
+  text-align: center;
+  padding: 0px;
 }
 .day-image {
   border: none;
@@ -108,10 +126,14 @@ ul {
       #989898;
   background-blend-mode: multiply, multiply;
   border: none;
-  left: 75px;
-  border-radius: 10px;
+
+  border-radius: 0px;
   box-sizing: content-box;
+
   position: relative;
+}
+.body-image {
+  padding: 0px 16px 0px 16px;
 }
 .tempLink {
   color: #ffffff;
@@ -132,24 +154,28 @@ ul {
       #989898;
   background-blend-mode: multiply, multiply;
   border: none;
-  left: 160px;
-  border-radius: 10px;
+
+  border-radius: 0px;
   box-sizing: content-box;
   position: relative;
 }
 
 .today-temp {
-  font-size: 50px;
+  font-size: 64px;
 }
 .units {
   position: relative;
   font-size: 15px;
   top: -25px;
 }
+.body-temp {
+  padding-right: 0px;
+  padding-bottom: 46px;
+}
 span.temp {
   color: #ffffff;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 18px;
 }
 .hourly-forecast {
   text-align: center;
