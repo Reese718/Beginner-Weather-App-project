@@ -159,18 +159,26 @@ ul {
   box-sizing: content-box;
   position: relative;
 }
+.day-temp .active {
+  color: #000000;
+  cursor: default;
+  text-decoration: none;
+}
+.day-temp .active:hover {
+  text-decoration: none;
+}
 
 .today-temp {
-  font-size: 64px;
+  font-size: 62px;
 }
 .units {
   position: relative;
-  font-size: 15px;
-  top: -25px;
+  font-size: 18px;
+  top: -32px;
 }
 .body-temp {
   padding-right: 0px;
-  padding-bottom: 46px;
+  padding-bottom: 49px;
 }
 span.temp {
   color: #ffffff;
