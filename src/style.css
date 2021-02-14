@@ -39,6 +39,7 @@ h5 {
 }
 ul {
   font-size: 16px;
+  line-height: 1;
   font-weight: 400;
   list-style: none;
   margin: 0 auto;
@@ -47,9 +48,10 @@ ul {
 #weatherBody {
   width: 470px;
   border: 2px dotted #ec6e4c;
-  padding: 10px 10px 15px 10px;
+  padding: 10px;
+  margin: 30px auto;
 
-  border-radius: 20px;
+  border-radius: 15px;
 }
 .city-search {
   display: block;
@@ -137,7 +139,12 @@ ul {
 }
 
 .today-temp {
-  font-size: 40px;
+  font-size: 50px;
+}
+.units {
+  position: relative;
+  font-size: 15px;
+  top: -25px;
 }
 span.temp {
   color: #ffffff;
@@ -167,9 +174,11 @@ span.temp {
 
   border-radius: 15px;
 }
-.card-text {
-  font-size: 24px;
+.fiveDay-text {
+  font-size: 16px;
+  text-align: center;
 }
-.sourceCode {
+#footer {
   color: #ffffff;
+  text-align: center;
 }

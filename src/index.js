@@ -73,7 +73,7 @@ function showTemp(response) {
   console.log(response.data);
   let temperature = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#temp-today");
-  tempElement.innerHTML = `${temperature}°F`;
+  tempElement.innerHTML = `${temperature}`;
   let cityElement = document.querySelector("#city-name");
   cityElement.innerHTML = response.data.name;
   let humidity = document.querySelector("#humidity");
@@ -103,7 +103,7 @@ function displayForecast(response) {
                   forecast.weather[0].icon
                 }@2x.png"/>
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
+                <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H | ${Math.round(forecast.main.temp_min)}°L</p>
               </div>
@@ -117,7 +117,7 @@ function displayForecast(response) {
                   forecast.weather[0].icon
                 }@2x.png"/>
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
+                <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
@@ -131,7 +131,7 @@ function displayForecast(response) {
                   forecast.weather[0].icon
                 }@2x.png"/>
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
+                <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
@@ -145,7 +145,7 @@ function displayForecast(response) {
                   forecast.weather[0].icon
                 }@2x.png"/>
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
+                <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
@@ -159,7 +159,7 @@ function displayForecast(response) {
                   forecast.weather[0].icon
                 }@2x.png"/>
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-                <p class="card-text">${Math.round(
+                <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>

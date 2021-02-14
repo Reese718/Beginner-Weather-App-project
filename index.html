@@ -82,13 +82,15 @@
             <div class="col-2 p-0 m-0">
               <div class="card day-temp" style="width: 9rem">
                 <div class="card-body">
-                  <h5 id="temp-today" class="card-title today-temp"></h5>
-                  <p class="card-text sub-temp">
-                    <a href="#" class="tempLink" id="celsius-link">°C</a> |
+                  <strong id="temp-today" class="card-title today-temp"></strong>
+                  
+                  <small class="card-text units">
                     <a href="#" class="tempLink" id="farenheit-link">°F</a
-                    ><br />
-                    <span id="feelsLike" class="temp"></span>
-                  </p>
+                    > |
+                    <a href="#" class="tempLink" id="celsius-link">°C</a> 
+                    <br />
+                  </small>
+                  <span id="feelsLike" class="temp"></span>
                 </div>
               </div>
             </div>
