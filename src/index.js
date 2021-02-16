@@ -57,7 +57,11 @@ let month = months[now.getMonth()];
 
 dateTime.innerHTML = `${month} ${date}, ${year} `;
 todayDisplay.innerHTML = `${day}`;
-time.innerHTML = `${hours}:${minutes}`;
+time.innerHTML = time.innerHTML = now.toLocaleString("en-US", {
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+});
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);
