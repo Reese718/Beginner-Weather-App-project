@@ -63,7 +63,7 @@ function formatHours(timestamp) {
   let date = new Date(timestamp);
   return date.toLocaleString("en-US", {
     hour: "numeric",
-    minute: "numeric",
+
     hour12: true,
   });
 }
