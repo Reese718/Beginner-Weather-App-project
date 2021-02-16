@@ -61,18 +61,11 @@ time.innerHTML = `${hours}:${minutes}`;
 
 function formatHours(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  if (hours > 12) {
-    hours = hours - 12;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  return `${hours}:${minutes}`;
+  return date.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
 }
 
 function showTemp(response) {
@@ -112,7 +105,7 @@ function displayForecast(response) {
                 <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
                 <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
-                )}°H | ${Math.round(forecast.main.temp_min)}°L</p>
+                )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
               </div>
             </div>
   `;
