@@ -116,7 +116,9 @@ function displayForecast(response) {
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
-                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <h5 class="card-title hour-time">${formatHours(
+                  forecast.dt * 1000
+                )}</h5>
                 <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
@@ -130,7 +132,9 @@ function displayForecast(response) {
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
-                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <h5 class="card-title hour-time">${formatHours(
+                  forecast.dt * 1000
+                )}</h5>
                 <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
@@ -144,7 +148,9 @@ function displayForecast(response) {
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
-                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <h5 class="card-title hour-time">${formatHours(
+                  forecast.dt * 1000
+                )}</h5>
                 <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
@@ -158,7 +164,9 @@ function displayForecast(response) {
                 <img src= "http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
                 }@2x.png"/>
-                <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+                <h5 class="card-title hour-time">${formatHours(
+                  forecast.dt * 1000
+                )}</h5>
                 <p class="fiveDay-text">${Math.round(
                   forecast.main.temp_max
                 )}°H<br />${Math.round(forecast.main.temp_min)}°L</p>
