@@ -208,6 +208,8 @@ function showPosition(position) {
   let apiKey = "19bab870f5f47c4355d6b6a4362e572f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemp);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
