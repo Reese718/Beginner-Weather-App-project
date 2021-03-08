@@ -167,7 +167,7 @@ ul {
 }
 
 .today-temp {
-  font-size: 62px;
+  font-size: 56px;
 }
 .units {
   position: relative;
@@ -176,7 +176,7 @@ ul {
 }
 .body-temp {
   padding-right: 0px;
-  padding-bottom: 49px;
+  padding-bottom: 58px;
 }
 span.temp {
   color: #ffffff;
