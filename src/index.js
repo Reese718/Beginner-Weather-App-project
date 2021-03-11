@@ -27,15 +27,7 @@ function formatDate(timestamp) {
 }
 
 let year = now.getFullYear();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wed",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 let day = days[now.getDay()];
 let months = [
   "January",
